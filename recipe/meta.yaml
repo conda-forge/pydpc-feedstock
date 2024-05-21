@@ -13,11 +13,12 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - numpy >=1.7
@@ -27,7 +28,6 @@ requirements:
   run:
     - python
     - matplotlib-base
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
