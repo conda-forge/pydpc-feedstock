@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydpc-{{ version }}.tar.gz
   sha256: f9a81a8d9b228d37fcce9f3b7a58e27c6efc9020b77ee5fa8f87367946e6aa2b
-  patches:
-    - python312.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
