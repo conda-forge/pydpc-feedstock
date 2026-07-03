@@ -1,5 +1,5 @@
 {% set name = "pydpc" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydpc-{{ version }}.tar.gz
-  sha256: f9a81a8d9b228d37fcce9f3b7a58e27c6efc9020b77ee5fa8f87367946e6aa2b
+  sha256: 168c953d2656c73562e1fde5e9935db354669a37a91a38537c4dce5266b9f280
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
